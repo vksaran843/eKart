@@ -1,0 +1,22 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           com.xyz.ekart.controllers.Application.index()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+
+POST    /ekart/placeOrder           com.xyz.ekart.controllers.OrderController.placeOrder
+
+POST     /ekart/allOrderList			com.xyz.ekart.controllers.OrderController.allOrderList
+
+POST    /ekart/addProduct           com.xyz.ekart.controllers.ProductController.addProduct
+
+POST    /ekart/modifyProduct        com.xyz.ekart.controllers.ProductController.modifyProduct
+
+POST    /ekart/deleteProduct        com.xyz.ekart.controllers.ProductController.deleteProduct
+
+GET    /ekart/getAllProduct        	com.xyz.ekart.controllers.ProductController.getAllProduct
