@@ -1,10 +1,10 @@
 
 
-addProduct : 
+addProduct :(POST)
 
-http://localhost:9009/ekart/addProduct
+EndPoint : http://localhost:9009/ekart/addProduct
 
-{
+Request : {
 	"productName":"laptop",
 
 	"productDescription":"HP I5 laptop",
@@ -29,11 +29,11 @@ http://localhost:9009/ekart/addProduct
 
 
 
+getAllProduct:(GET)
 
+EndPoint : http://localhost:9009/ekart/getAllProduct
 
-http://localhost:9009/ekart/getAllProduct
-
-{
+Response  : {
     "responseCode": "200",
     "status": "Success",
     "errorCode": null,
@@ -81,12 +81,12 @@ http://localhost:9009/ekart/getAllProduct
 }
 
 
+modifyProduct: (POST)
+
+EndPoint : http://localhost:9009/ekart/modifyProduct
 
 
-http://localhost:9009/ekart/modifyProduct
-
-
-{
+Request : {
 	
 	"productId":"1",
 	
@@ -103,7 +103,7 @@ http://localhost:9009/ekart/modifyProduct
 	"productPrice":"1100.00"
 }
 
-{
+Response : {
     "responseCode": "200",
     "status": "Success",
     "errorCode": null,
@@ -111,18 +111,18 @@ http://localhost:9009/ekart/modifyProduct
     "responseObj": null
 }
 
+deleteProduct :(POST)
+
+EndPoint : http://localhost:9009/ekart/deleteProduct
 
 
-http://localhost:9009/ekart/deleteProduct
-
-
-{
+Request :{
 	
 	"productId":"1"
 }
 
 
-{
+Response : {
     "responseCode": "200",
     "status": "Success",
     "errorCode": null,
@@ -131,11 +131,11 @@ http://localhost:9009/ekart/deleteProduct
 }
 
 
+placeOrder :(POST)
 
+EndPoint : http://localhost:9009/ekart/placeOrder
 
-http://localhost:9009/ekart/placeOrder
-
-{
+Request : {
 	
 	"customerId":"1",
 	
@@ -169,7 +169,7 @@ http://localhost:9009/ekart/placeOrder
 }
 
 
-{
+Response : {
     "responseCode": "200",
     "status": "Success",
     "errorCode": null,
@@ -177,17 +177,18 @@ http://localhost:9009/ekart/placeOrder
     "responseObj": null
 }
 
+allOrderList :(POST)
 
-http://localhost:9012/ekart/allOrderList
+EndPoint : http://localhost:9012/ekart/allOrderList
 
-{
+Request : {
 	
 	"customerId":"1"
 
 }
 
 
-{
+Response : {
     "responseCode": "200",
     "status": "Success",
     "errorCode": null,
