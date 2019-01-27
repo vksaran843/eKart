@@ -2,3 +2,42 @@ This is your new Play 2.0 application
 =====================================
 
 This file will be packaged with your application, when using `play dist`.
+
+Run :(to run this application run following commands)
+
+1. go to project directory
+2. sbt compile
+3. sbt run (now application is running default port 9000. for different port use this command sbt -Dhttp.port=portNo run)
+
+this application is running with h2 database.
+
+please follow these steps :- 
+
+1. go to browser tab and hit http://localhost:port/
+2. execute sql script to create database schema.
+3. now application is ready to perform rest api.
+
+***********************************************************************************************
+
+How to run with different database :-
+
+made following changes :
+
+1. open build.sbt file and add relevant database driver's dependancy.
+2. open application.conf file and made following changes.
+    db.default.driver=org.h2.Driver (driver)
+    db.default.url="jdbc:h2:mem:play" (database scheme url)
+    db.default.user=sa                (username)
+    db.default.password=              (password)
+    
+    play.evolutions.enabled=false (change it to false)
+    
+ ****************************************************************************************************   
+ 
+ Api's Endpoint is in routes file
+ 
+ some sample api's request response is in readme_vikas.txt file
+ 
+
+
+
